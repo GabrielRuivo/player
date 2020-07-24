@@ -2,7 +2,7 @@
 Music player
 </h1>
 
-<p>Você pode ver minha aplicação funcionando nesse link: <a href="https://gabrielruivo.github.io/player/" target="blank" >Aqui</a></p>
+<p>Você pode ver minha aplicação funcionando nesse link: <a href="https://gabrielruivo.github.io/player/" target="_blank" >Aqui</a></p>
 
 <div align="center">
   <img src="./assets/gifs/gifplayer.gif" alt="demo-web" height="420" >
