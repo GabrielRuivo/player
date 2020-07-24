@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Player</title>
+</head>
+<body>
+  <div id="bg">
+    <div id="blackLayer"></div>
+    <img src="./assets/img/24kmagic.jpg" >
+  </div>
+  <main>
+
+    <div id="image">
+      <img src="./assets/img/24kmagic.jpg" >
+    </div>
+
+    <div id="player">
+
+      <div id="songTitle">24k Magic</div>
+
+      <div id="buttons">
+        <button id="pre" onclick="pre()" ><img src="./assets/img/pre.png" height="90%" width="90%" alt=""></button>
+        <button id="play" onclick="playOrPauseSong()" ><img class="play" src="./assets/img/play.svg" height="90%" width="90%" alt="" ></button>
+        <button id="next" onclick="next()" ><img src="./assets/img/next.png" height="90%" width="90%" alt=""></button>
+      </div>
+
+    </div>
+      <div id="seek-bar" >
+        <div id="fill"></div>
+        <div id="handle"></div>
+      </div>
+  </main>
+  <script src="script.js" ></script>
+</body>
+</html>
