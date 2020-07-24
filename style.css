@@ -53,8 +53,8 @@ main {
 
 #image img {
   margin-top: 20px;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -86,6 +86,10 @@ main {
 button {
   border: none;
   background: transparent;
+}
+
+.arrow:hover {
+  color: royalblue;
 }
 
 #play, #next, #pre {

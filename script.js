@@ -21,6 +21,7 @@ function playSong(){
     song.play()
   } else {
     song.pause();
+    disablePreButtonWhenFirst();
   }
 }
 
@@ -47,14 +48,15 @@ function playOrPauseSong() {
   if(song.paused) {
     song.play();
     let playimg = document.querySelector(".play")
-    playimg.setAttribute("src", "./assets/img/pause.svg");
+    playimg.setAttribute("src", "./assets/img/icons/pause.png");
     disablePreButtonWhenFirst();
     disableNextButtonWhenLast();
 
   } else  {
     song.pause();
     let pauseimg = document.querySelector(".play")
-    pauseimg.setAttribute("src", "./assets/img/play.svg");
+    pauseimg.setAttribute("src", "./assets/img/icons/play-button.png");
+    disablePreButtonWhenFirst()
   }
 }
 
@@ -67,7 +69,7 @@ song.addEventListener('timeupdate', function () {
 song.addEventListener('timeupdate', function nextMusicAuto () {
   if(song.currentTime - song.duration == 0){
     if(currentSong == songs.length-1){
-      songs[0].play();
+      song.play()
     }
     function pauseAndNext(){
       song.pause();
@@ -83,8 +85,6 @@ song.addEventListener('timeupdate', function nextMusicAuto () {
     disableNextButtonWhenLast(); 
   }
 })
-
-nextMusicAuto();
 
 function next() {
   function pauseAndNext(){
@@ -103,6 +103,9 @@ function next() {
 }
 
 function pre() {
+  if(currentSong == 0 && song.paused) {
+    disablePreButtonWhenFirst()
+  }
   function pauseAndBack(){
     song.pause();
     let pauseimg = document.querySelector(".play")
