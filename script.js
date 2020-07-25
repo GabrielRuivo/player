@@ -1,8 +1,6 @@
 var songs = ['./assets/audio/24kmagic.mp3', './assets/audio/UptownFunk.mp3', './assets/audio/lazySong.mp3'];
 var poster = ['./assets/img/24kmagic.jpg', './assets/img/img-uptownFunk.jpg', './assets/img/lazySong.jpg'];
 
-console.log(songs.length-1)
-
 var songTitle = document.getElementById('songTitle');
 var fillBar = document.getElementById('fill');
 
@@ -123,20 +121,16 @@ function pre() {
 function disablePreButtonWhenFirst() {
   if(currentSong == 0) {
     document.getElementById('pre').disabled = true;
-    console.log('back desabilitado')
   } else if (currentSong > 0) {
     document.getElementById('pre').disabled = false;
-    console.log('back habilitado')
   }
 }
 
 function disableNextButtonWhenLast(){
   if(currentSong == songs.length-1){
     document.getElementById('next').disabled = true;
-    console.log('next desabilitado')
   } else if (currentSong < songs.length-1){
     document.getElementById('next').disabled = false;
-    console.log('next habilitado')
   }
 }
 
